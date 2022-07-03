@@ -6,8 +6,11 @@ public class Chambre {
     private String numChambre;
     private TypeChambre type;
     private Pavillon pavillon;
+   private static int x=0;
 
-    
+   public Chambre(){
+        this.id = ++x;
+   } 
 
     
     
@@ -53,4 +56,9 @@ public class Chambre {
     public void setId(int id) {
         this.id = id;
     }
+
+    // @Override
+    // public String toString() {
+    //     return "Chambre [id=" + id + ", Num chambre=" + numChambre + ", Type=" + type + ", Pavillon=" + pavillon+ "]";
+    // }
 }

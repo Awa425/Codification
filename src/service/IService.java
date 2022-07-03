@@ -23,5 +23,6 @@ public interface IService {
     public void affecterChambrePavillon(Chambre chambre,Pavillon pavillon);
 
     public void affecterChambreBoursierLoge(Chambre chambre,BoursiersLoges BoursiersLoges);
+    public void menu();
 
 }

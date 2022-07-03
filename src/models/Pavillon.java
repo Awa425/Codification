@@ -4,6 +4,11 @@ public class Pavillon {
     private int id;
     private int nbreDetages;
     private int numPav;
+    private static int x=0;
+
+   public Pavillon(){
+        this.id = ++x;
+   }
 
 
     public int getNumPav() {
