@@ -12,8 +12,6 @@ public class Chambre {
         this.id = ++x;
    } 
 
-    
-    
     // type=individual or a deux
 
 
@@ -57,8 +55,9 @@ public class Chambre {
         this.id = id;
     }
 
-    // @Override
-    // public String toString() {
-    //     return "Chambre [id=" + id + ", Num chambre=" + numChambre + ", Type=" + type + ", Pavillon=" + pavillon+ "]";
-    // }
+    @Override
+    public String toString() {
+        // return "Chambre [id=" + id + ", Num chambre=" + numChambre + ", Type=" + type + ", Pavillon=" + this.getPavillon().getId()+ "]";
+        return "Chambre [id: " + id + ", Num chambre: " + numChambre + ", Type: " + type +" Numero etage: "+numEtage + " Pavillon=" + pavillon.getId()+"]";
+    }
 }
