@@ -29,7 +29,7 @@ public class ServiceTableau implements IService {
             System.out.println("5: Quitter");
             int iMenu = sc.nextInt();
                 if (iMenu == 1) {
-                    System.out.println("Ajouter Pavillon");
+                    System.out.println("==============Ajouter Pavillon==============");
                     System.out.println("Donner le numero du pavillon");
                     pavillon.setNumPav(sc.nextInt());
                     System.out.println("Donner le nombre d'etage");
@@ -46,7 +46,7 @@ public class ServiceTableau implements IService {
                     menu();
                 }
                 else if (iMenu == 3) {
-                    System.out.println("Ajout Chambre"); 
+                    System.out.println("==============Ajout Chambre============"); 
                     System.out.println("Donner le type de chambre: tapez");
                     System.out.println("1: si c'est individul");
                     System.out.println("2: si c'est double");
@@ -66,12 +66,14 @@ public class ServiceTableau implements IService {
                     System.out.println("Donner le numero de l'etage");
                     chambre.setNumEtage(sc.nextInt());
                     System.out.println("Choisit le pavillon");
+                    this.listerPavillon();
                     id_saisi = sc.nextInt();
                     System.out.println(indexPavillon); 
                      for(int i=1; i<= indexPavillon; i++){
                          if (pavillons[id_saisi-1]!=null) {
                              chambre.setPavillon(pavillons[id_saisi-1]); 
                          }
+                         else System.out.println("Le pavillon n'existe pas");   
                      }
                     this.addChambre(chambre);
                     System.out.println("Chambre Ajouter");
